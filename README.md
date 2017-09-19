@@ -86,3 +86,4 @@ Here's a few other useful commands to work with Nvidia dockers
 
 * https://medium.com/@flavienguillocheau/documenting-docker-with-gpu-deep-learning-for-noobs-2edd350ab2f7
 * https://medium.com/@gooshan/for-those-who-had-trouble-in-past-months-of-getting-google-s-tensorflow-to-work-inside-a-docker-9ec7a4df945b
+* https://github.com/JihongJu/Jockerfiles
