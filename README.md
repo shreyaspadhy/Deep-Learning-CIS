@@ -17,7 +17,7 @@ Now, for the purposes of running and testing Python code with PyTorch, we will b
 To create a docker that you can test and write code on for the foreseeable future, run the following command
 
 ```
-$ nvidia-docker run --rm -d --name <yourDockerName> -p 8888:8888 -ti -ipc=host pytorch/pytorch:latest
+$ nvidia-docker run --rm -d --name <yourDockerName> -p 8888:8888 -ti --ipc=host pytorch/pytorch:latest
 ```
 
 Here's what every part of that bash command means.
@@ -86,4 +86,3 @@ Here's a few other useful commands to work with Nvidia dockers
 
 * https://medium.com/@flavienguillocheau/documenting-docker-with-gpu-deep-learning-for-noobs-2edd350ab2f7
 * https://medium.com/@gooshan/for-those-who-had-trouble-in-past-months-of-getting-google-s-tensorflow-to-work-inside-a-docker-9ec7a4df945b
-* 
