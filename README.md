@@ -1,5 +1,6 @@
-# Deep-Learning-CIS
-This repository contains tutorials and resources to get started on Deep Learning at the Centre for Imaging Science at Johns Hopkins University
+# Deep Learning at CIS
+
+This repository contains tutorials and resources to get started on Deep Learning at the [Centre for Imaging Science](http://www.cis.jhu.edu) at Johns Hopkins University
 
 ### PyTorch with Nvidia Docker and Jupyter Notebook
 
@@ -80,3 +81,9 @@ Here's a few other useful commands to work with Nvidia dockers
 * `$ nvidia-docker ps` lists current images
 * `$ nvidia-docker cp path/to/your/file <yourDockerName>:/destination` copies files from your local system to your Docker image. By default, the Docker initializes in the `/workspace/` directly, so make sure to copy files into that.
 * `$ nvidia-smi` to monitor your GPU usage.
+
+#### References
+
+* https://medium.com/@flavienguillocheau/documenting-docker-with-gpu-deep-learning-for-noobs-2edd350ab2f7
+* https://medium.com/@gooshan/for-those-who-had-trouble-in-past-months-of-getting-google-s-tensorflow-to-work-inside-a-docker-9ec7a4df945b
+* 
