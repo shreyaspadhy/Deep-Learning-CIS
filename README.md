@@ -17,14 +17,15 @@ Now, for the purposes of running and testing Python code with PyTorch, we will b
 To create a docker that you can test and write code on for the foreseeable future, run the following command
 
 ```
-$ nvidia-docker run --rm -d --name <yourDockerName> -p 8888:8888 -ti --ipc=host pytorch/pytorch:latest
+$ nvidia-docker run --rm -d --name <yourDockerName> -v /path/to/host/directory:/root/workspace -p 8888:8888 -ti --ipc=host pytorch/pytorch:latest
 ```
 
 Here's what every part of that bash command means.
 * We're creating a Docker with Nvidia compatibility called `<yourDockerName>`
 * `--rm` recursively copies all files from the official PyTorch repository
+* `-v` attaches a folder on your home directory to the Docker, to access data and your personal code
 * `-p` is forwarding the port `0.0.0.0:8888` from the docker to your local machine at `0.0.0.0:8888`
-* `-ipc=host` can be ignored for now, it simply makes it easier for multithreading operations on PyTorch down the line
+* `--ipc=host` can be ignored for now, it simply makes it easier for multithreading operations on PyTorch down the line
 
 Upon running that bash script, you should now have a Docker created on the zeta.cis.jhu.edu server. To check that this is correct, run the following command that displays all current Docker images.
 
@@ -74,7 +75,6 @@ To reinitialize your docker, you should simply type the following commands again
 Sometimes, if you're logging in after a while, you may have to retunnel the `8888` port through zeta.cis.jhu.edu to your local machine (and once again through foo.cis.jhu.edu to your personal machine), by typing the bash script above.
 
 ### Additional information about Nvidia Docker
-
 
 Here's a few other useful commands to work with Nvidia dockers
 * `$ nvidia-docker images` lists all the images loaded on your server currently.
